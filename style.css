@@ -23,18 +23,18 @@ h1{
     
 }
 .wrapper{
-  max-width: 405px;
+  max-width: 495px;
   padding: 28px 0 30px;
   margin: 137px auto;
   background: whitesmoke;
   border-radius: 7px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   align-items: center;
-  justify-content: right;
+  justify-content: center;
   
 }
 .task-input{
-  height: 60px;
+  height: 50px;
   padding: 0 25px;
   position: relative;
 }
@@ -56,6 +56,7 @@ h1{
 .task-input input.active{
   padding-left: 52px;
   border: 2px solid #03f930;
+ 
 
 }
 .task-input input::placeholder{
@@ -69,12 +70,13 @@ h1{
 }
 .controls{
   padding: 18px 25px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #e9dede;
   
 }
 .filters span{
   margin: 0 8px;
   font-size: 20px;
+  font-weight: 400;
   color: #0b0101;
   cursor: pointer;
 }
@@ -118,28 +120,39 @@ h1{
 
 }
 .task-box.overflow{
-  overflow-y: auto;
-  max-height: 700px;
+  
+  overflow-y: scroll;
+  height: 300px;
+  
   
 }
 .task-box::-webkit-scrollbar{
-  width: 5px;
+  width: 10px;
+  
 }
 .task-box::-webkit-scrollbar-track{
-  background: #000;
-  border-radius: 25px;
+  background: rgb(21,146,171);
+  border-radius: 12px;
 }
 .task-box::-webkit-scrollbar-thumb{
-  background: #e6e6e6;
-  border-radius: 25px;
+  background: rgb(1, 18, 39);
+  border-radius: 8px;
 }
+.task-box::-webkit-scrollbar-thumb:hover{
+  background: #03f930;
+}
+.task-box::-webkit-scrollbar-thumb:button{
+  display: none;
+}
+
+
 .task-box .task{
   list-style: none;
   font-size: 18px;
   margin-bottom: 18px;
   padding-bottom: 16px;
   align-items: flex-start;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #170101;
 }
 .task-box .task:last-child{
   margin-bottom: 0;
@@ -153,7 +166,7 @@ h1{
 }
 .task label input{
   margin-top: 7px;
-  accent-color: #0526fe;
+  accent-color: #2d05b0;
   width: 20px;
   height: 20px;
  
@@ -164,16 +177,19 @@ h1{
   margin-left: 12px;
   word-wrap: break-word;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 300;
   box-sizing: border-box;
+ 
   
 }
 .task label p.checked{
-  text-decoration: none;
   
+  background-size: cover;
+  text-decoration:none;
+  color: #2d05b0;
   
- 
 }
+ 
 .task-box .settings{
   position: relative;
 }
@@ -222,29 +238,33 @@ h1{
   padding-right: 8px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   body{
     padding: 0 10px;
   }
   .wrapper {
-    padding: 20px 0;
+    padding: 16px 0;
   }
  
   .filters span{
-    margin: 0 5px;
+    margin: 0 3px;
+    font-size: 20px;
   }
   .task-input{
     padding: 0 20px;
   }
   .controls{
-    padding: 18px 20px;
+    padding: 16px 18px;
+  }
+  .controls .clear-btn{
+       font-size: small;
   }
   .task-box{
-    margin-top: 20px;
+    margin-top: 18px;
     margin-right: 5px;
     padding: 0 15px 10px 20px;
   }
   .task label input{
-    margin-top: 4px;
+    margin-top: 2px;
   }
 }
