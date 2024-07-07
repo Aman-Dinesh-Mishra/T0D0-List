@@ -238,7 +238,7 @@ h1{
   padding-right: 8px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   body{
     padding: 0 10px;
   }
@@ -248,11 +248,12 @@ h1{
  
   .filters span{
     margin: 0 3px;
-    font-size: 20px;
+    font-size: 18px;
   }
   .task-input{
     padding: 0 20px;
   }
+  
   .controls{
     padding: 16px 18px;
   }
@@ -260,11 +261,11 @@ h1{
        font-size: small;
   }
   .task-box{
-    margin-top: 18px;
+    margin-top: 20px;
     margin-right: 5px;
     padding: 0 15px 10px 20px;
   }
   .task label input{
-    margin-top: 2px;
+    margin-top: 6px;
   }
 }
